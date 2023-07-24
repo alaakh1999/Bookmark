@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- fav icon -->
+    <link rel="icon" href="bookmark.png">
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container py-5 m-auto d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-center mx-auto position-relative">Bookmarker</h1>
+
+    </div>
+    <div class="container">
+        <div class="dotedLine"></div>
+    </div>
+    <div class="container bookmark p-3 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+    </div>
+    <div class="container m-auto ">
+
+        <label for="siteName" class=" pb-2 fw-semibold mx-2">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name
+        </label>
+        <input type="url" placeholder="Bookmark Name" id="siteName" class="form-control">
+        <label for="siteUrl" class=" pb-2 fw-semibold mx-2 mt-5">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL
+        </label>
+        <input type="text" placeholder="Website URL" id="siteUrl" class="form-control">
+
+
+        <div class="text-center">
+            <button class="btn mt-3" id="submitBtn">Submit</button>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="dotedLine py-2"></div>
+    </div>
+    <div class="container">
+        <table class="table text-center">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container-fluid box position-fixed start-0 top-0 bottom-0 end-0 d-flex justify-content-center align-items-center d-none">
+        <div class="container boxContant bg-white rounded-2 shadow-lg">
+            <div class="d-flex justify-content-between">
+                <div class="circle d-flex container mb-4 mt-5">
+                    <div class="bg-danger cir me-2"></div>
+                    <div class="bg-warning cir me-2"></div>
+                    <div class="bg-success cir me-2"></div>
+                </div>
+                <button class="btn border-0" id="closeBtn">
+                    <i class="fa-solid fa-xmark close fs-3"></i>
+                </button>
+            </div>
+            <p class="mb-4 mx-2">
+                Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <ol class="list-unstyled mx-2">
+                <li><i class="fa-regular fa-circle-right p-2" style="color: #bb4210;font-size: 18px;"></i>
+                    Site name must contain at least 3 characters
+                </li>
+                <li><i class="fa-regular fa-circle-right p-2" style="color: #bb4210;font-size: 18px;"></i>
+                    Site URl must be a vaild one
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
